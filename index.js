@@ -27,23 +27,23 @@ function addItemToInventory(url) {
 }
 
 function newInventory(){
-    let inventory = document.createElement('div');
-    inventory.style.position = 'fixed';
-    inventory.style.bottom = '0px';
-    inventory.style.left = '0px';
-    inventory.style.width = '100%';
-    inventory.style.height = '100px';
-    inventory.style.display = 'flex';
-    inventory.style.flexDirection = 'row';
-    inventory.style.alignItems = 'center';
-    inventory.style.justifyContent = 'space-evenly';
-    inventory.style.border = '2px solid black';
-    inventory.style.backgroundColor = 'brown';
-    document.body.append(inventory);
-    return inventory;
+    let inv = document.createElement('div');
+    inv.style.position = 'fixed';
+    inv.style.bottom = '0px';
+    inv.style.left = '0px';
+    inv.style.width = '100%';
+    inv.style.height = '100px';
+    inv.style.display = 'flex';
+    inv.style.flexDirection = 'row';
+    inv.style.alignItems = 'center';
+    inv.style.justifyContent = 'space-evenly';
+    inv.style.border = '2px solid black';
+    inv.style.backgroundColor = 'brown';
+    document.body.append(inv);
+    return inv;
 }
 
-newInventory()
+//newInventory()
 newImage('assets/green-character.gif', 100, 250)
 newImage('assets/tree.png', 200, 450)
 newImage('assets/pillar.png', 350, 250)
