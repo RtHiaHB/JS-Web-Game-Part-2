@@ -1,4 +1,4 @@
-let inventory;
+let inventory = newInventory();
 
 function newImage(url, left, bottom){
     let object = document.createElement('img')
@@ -20,20 +20,27 @@ function newItem(url, left, bottom){
     }) 
 }
 
+function addItemToInventory(url) {
+    let inventoryItem = document.createElement('img');
+    inventoryItem.src = url;
+    inventory.append(inventoryItem);
+}
+
 function newInventory(){
-    inventory = document.createElement('div')
-    inventory.style.position = 'fixed'
+    let inventory = document.createElement('div');
+    inventory.style.position = 'fixed';
     inventory.style.bottom = '0px';
-    inventory.style.left = '0px'
-    inventory.style.width = '100%'
-    inventory.style.height = '100px'
-    inventory.style.display = 'flex'
-    inventory.style.flexDirection = 'row'
-    inventory.style.alignItems = 'center'
-    inventory.style.justifyContent = 'space-evenly'
-    inventory.style.border = '2px solid black'
-    inventory.style.backgroundColor = 'brown'
-    document.body.append(inventory)
+    inventory.style.left = '0px';
+    inventory.style.width = '100%';
+    inventory.style.height = '100px';
+    inventory.style.display = 'flex';
+    inventory.style.flexDirection = 'row';
+    inventory.style.alignItems = 'center';
+    inventory.style.justifyContent = 'space-evenly';
+    inventory.style.border = '2px solid black';
+    inventory.style.backgroundColor = 'brown';
+    document.body.append(inventory);
+    return inventory;
 }
 
 newInventory()
